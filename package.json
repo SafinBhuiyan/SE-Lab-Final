@@ -1,0 +1,12 @@
+{
+  "name": "se-lab-final",
+  "version": "1.0.0",
+  "description": "Software Engineering Lab Final Project",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "oracledb": "^6.2.0"
+  }
+}

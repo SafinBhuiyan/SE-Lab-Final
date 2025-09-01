@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Lab Final - Homepage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="branding">
+            <img src="ius-logo.png" alt="IUS Logo" class="logo">
+            <h1>SE Lab Final Project</h1>
+            <p class="subtitle">User Authentication System</p>
+        </div>
+
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="window.showLogin()">Login</button>
+                <button class="tab-btn" onclick="window.showRegister()">Register</button>
+            </div>
+
+            <div id="loginForm" class="auth-form">
+                <h2>Welcome Back</h2>
+                <form id="loginFormElement">
+                    <div class="input-group">
+                        <input type="text" id="loginUsername" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Login</button>
+                </form>
+                <div id="loginMessage"></div>
+            </div>
+
+            <div id="registerForm" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <form id="registerFormElement">
+                    <div class="input-group">
+                        <input type="text" id="registerUsername" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="registerEmail" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Register</button>
+                </form>
+                <div id="registerMessage"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script>
+        // Make functions globally available
+        window.showLogin = function() {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const tabBtns = document.querySelectorAll('.tab-btn');
+
+            if (loginForm) loginForm.classList.remove('hidden');
+            if (registerForm) registerForm.classList.add('hidden');
+            if (tabBtns[0]) tabBtns[0].classList.add('active');
+            if (tabBtns[1]) tabBtns[1].classList.remove('active');
+        };
+
+        window.showRegister = function() {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const tabBtns = document.querySelectorAll('.tab-btn');
+
+            if (loginForm) loginForm.classList.add('hidden');
+            if (registerForm) registerForm.classList.remove('hidden');
+            if (tabBtns[0]) tabBtns[0].classList.remove('active');
+            if (tabBtns[1]) tabBtns[1].classList.add('active');
+        };
+    </script>
+</body>
+</html>
