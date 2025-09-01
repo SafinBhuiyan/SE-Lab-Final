@@ -6,13 +6,11 @@ A simple web application demonstrating user registration and login with Oracle d
 - HTML, CSS, JavaScript
 - Pure Node.js (no frameworks)
 - Oracle Database 11g
-- Selenium WebDriver
 
 ## Prerequisites
 - Node.js installed
 - Oracle Database 11g running
 - Oracle Instant Client installed (for database connectivity)
-- Chrome browser for Selenium tests
 
 ## Oracle Instant Client Setup
 
@@ -51,17 +49,12 @@ Since you're using Oracle 11g, you need to install Oracle Instant Client for dat
    The server will start on http://localhost:3000
 
 4. **Testing:**
-   Testing will be performed using Chrome extension instead of automated scripts.
+   Testing will be performed using Chrome extension.
    Open Chrome browser and use your testing extension to verify:
    - Homepage loads correctly
    - User registration works
    - User login functions properly
    - Session management operates as expected
-
-4. **Run Selenium Tests:**
-   ```bash
-   node tests/test.js
-   ```
 
 ## Features
 - 🎓 IUS University branding and professional logo
